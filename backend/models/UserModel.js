@@ -7,4 +7,3 @@ const userSch=new mongoose.Schema({
 })
 
 export const User=new mongoose.model('User',userSch)
- 

@@ -24,11 +24,9 @@ export const signUp=async(req,res)=>{
     }
 }
 
-
 export const login=async(req,res)=>{
     const {email,password}=req.body
     try {
-        
         const user=await User.findOne({email})
         if (!user) {
          return   res.status(500).json({message:'user doesnt exist'})
@@ -45,5 +43,3 @@ export const login=async(req,res)=>{
         res.status(500).json({message:'error loggin in',error})
     }
 }
-
-
