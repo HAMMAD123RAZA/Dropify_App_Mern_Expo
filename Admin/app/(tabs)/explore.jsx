@@ -1,5 +1,5 @@
 import { View, FlatList, Text, TextInput, TouchableOpacity, RefreshControl } from 'react-native';
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, useRef, useCallback } from 'react';
 import CardUi from '../components/CardUi';
 import axios from 'axios';
 import { Ionicons } from '@expo/vector-icons';
@@ -13,13 +13,14 @@ const Explore = () => {
     const [error, setError] = useState(null);
     const refRBSheet = useRef();
     
+    
     const [selectedFilters, setSelectedFilters] = useState({
         price: null,
         category: null,
         litre: null,
     });
 
-    const [refreshing, setRefreshing] = React.useState(false);
+    const [refreshing, setRefreshing] = useState(false);
 
     const filterOptions = [
         {
@@ -38,7 +39,7 @@ const Explore = () => {
 
     const fetchData = async () => {
         try {
-            const response = await axios.get('http://192.168.100.10:8080/filter', {
+            const response = await axios.get('http://192.168.100.5:8080/filter', {
                 params: {
                     price: selectedFilters.price || '',
                     category: selectedFilters.category || '', 
@@ -86,12 +87,16 @@ const Explore = () => {
         </View>
     );
 
-    const onRefresh = React.useCallback(() => {
+    const onRefresh = useCallback(async() => {
         setRefreshing(true);
-        setTimeout(() => {
-          setRefreshing(false);
-        }, 2000);
-      }, []);
+        try {
+            await fetchData()
+        } catch (error) {
+            console.error('failed to refresh data',err)
+        }finally{
+            setRefreshing(false)
+        }
+      }, [fetchData]);
     
     return (
         <View>

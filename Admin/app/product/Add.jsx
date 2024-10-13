@@ -40,7 +40,7 @@ const Add = () => {
       const cloudinaryUrl = await uploadToCloudinary(image);
       if (cloudinaryUrl) {
         try {
-          const api = await axios.post('http://192.168.0.2:8080/create', {
+          const api = await axios.post('http://192.168.100.5:8080/create', {
             name,
             price,
             litre,

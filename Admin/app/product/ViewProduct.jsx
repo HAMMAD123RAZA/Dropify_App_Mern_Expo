@@ -1,19 +1,31 @@
-import { View, Text, FlatList } from 'react-native'
-import React, { useEffect, useState } from 'react'
+import { View, Text, FlatList, RefreshControl } from 'react-native'
+import React, { useCallback, useEffect, useState } from 'react'
 import axios from 'axios'
 import CardUi from '../components/CardUi'
 
 const ViewProduct = () => {
   const [data, setdata] = useState('')
-  
+  const [refreshing, setRefreshing] = useState(false)
+
   const fetchData=async()=>{
     try {
-      const api=await axios.get('http://192.168.100.10:8080/get')
+      const api=await axios.get('http://192.168.100.5:8080/get')
       setdata(api.data)
     } catch (error) {
       console.log(error)
     }
   }
+
+  const onRefresh = useCallback(async() => {
+    setRefreshing(true);
+    try {
+        await fetchData()
+    } catch (error) {
+        console.error('failed to refresh data',err)
+    }finally{
+        setRefreshing(false)
+    }
+  }, [fetchData]);
 
   useEffect(()=>{
     fetchData()
@@ -21,7 +33,7 @@ const ViewProduct = () => {
 
   const renderItem=({item})=>{
     return (
-      <View key={item._id} >
+      <View key={item._id}  >
 <CardUi item={item}  />
       </View>
     )
@@ -30,6 +42,9 @@ const ViewProduct = () => {
   return (
     <View>
 <FlatList
+refreshControl={
+  <RefreshControl refreshing={refreshing} onrefresh={onRefresh}/>
+}
 ListHeaderComponent={()=>{
   return (
     <View  >
@@ -38,6 +53,7 @@ ListHeaderComponent={()=>{
     </View>
   )
 }}
+
 data={data} renderItem={renderItem}  numColumns={2}  />
     </View>
   )
