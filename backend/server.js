@@ -7,6 +7,7 @@ import { CreateProduct } from './controllers/CreateProduct.js';
 import { filProduct, GetProduct, GetProducts } from './controllers/GetProducts.js';
 import { login, signUp } from './controllers/UserController.js';
 import { delProduct } from './controllers/DelProduct.js';
+import { createOrder } from './controllers/CreateOrder.js';
 
 dotenv.config();
 
@@ -34,6 +35,7 @@ app.post('/signup',signUp)
 app.get('/login',login)
 app.get('/filter',filProduct)
 app.delete('/delete/:id',delProduct)
+app.post('/sendOrder',createOrder)
 
 app.get('/',(req,res)=>{
     res.send('hey there')

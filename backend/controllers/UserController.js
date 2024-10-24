@@ -24,6 +24,7 @@ export const signUp=async(req,res)=>{
     }
 }
 
+
 export const login=async(req,res)=>{
     const {email,password}=req.body
     try {
@@ -37,7 +38,6 @@ export const login=async(req,res)=>{
         }
         const token=jwt.sign({id:user._id, email},process.env.jwt_secKey, {expiresIn:"1h"})
         res.status(200).json({message:"user logged in ",token})
-    
 
     } catch (error) {
         res.status(500).json({message:'error loggin in',error})

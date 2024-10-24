@@ -29,7 +29,7 @@ const Explore = () => {
         },
         {
             title: 'Category',
-            values: ['bottle', 'Tanker', 'gallon'],
+            values: ['Bottle', 'Tanker', 'Gallon','Mini Bottle'],
         },
         {
             title: 'Litre',
@@ -39,7 +39,7 @@ const Explore = () => {
 
     const fetchData = async () => {
         try {
-            const response = await axios.get('http://192.168.100.5:8080/filter', {
+            const response = await axios.get('http://192.168.100.9:8080/filter', {
                 params: {
                     price: selectedFilters.price || '',
                     category: selectedFilters.category || '', 
@@ -64,8 +64,10 @@ const Explore = () => {
     // Apply search filter whenever searchQuery changes
     useEffect(() => {
         if (searchQuery) {
+            const query=searchQuery.toLowerCase()
             const filteredData = allData.filter(item =>
-                item.name.toLowerCase().includes(searchQuery.toLowerCase())  // Filter data based on search query
+                item.name.toLowerCase().includes(query) ||
+                item.price.toString().includes(query)
             );
             setData(filteredData);  // Update data state with search results
         } else {

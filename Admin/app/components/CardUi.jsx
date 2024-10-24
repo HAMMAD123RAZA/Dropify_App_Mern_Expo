@@ -10,7 +10,7 @@ const CardUi = ({ item }) => {
 
   const handleDel = async () => {
     try {
-      const deletion = await axios.delete(`http://192.168.100.5:8080/delete/${_id}`);
+      const deletion = await axios.delete(`http://192.168.100.9:8080/delete/${_id}`);
       if (deletion.status === 200) {
         setIsDeleted(true)
       }
