@@ -14,19 +14,18 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 
-// app.use(cors())
-
 app.use(cors());
 
-app.use(express.urlencoded())
+app.use(express.urlencoded({ extended: true }));
 
-mongoose.connect('mongodb://localhost:27017',{
-    dbName:'Water'
-}).then(() => {
-    console.log('db connected');
-}).catch(() => {
-    console.log('error connecting db');
-});
+
+const url =`mongodb+srv://hr7643157:hr7643157@cluster0.uft9m.mongodb.net/`;
+
+const connectionParams = {};
+mongoose.connect("mongodb+srv://hr7643157:hr7643157@cluster0.uft9m.mongodb.net/")
+    .then(() => console.log('Connected to the database'))
+    .catch((err) => console.error(`Error connecting to the database. \n${err}`));
+
 
 app.post('/create',CreateProduct)
 app.get('/get',GetProducts)
