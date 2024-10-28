@@ -14,15 +14,17 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 
+// app.use(cors())
+
 app.use(cors());
 
 app.use(express.urlencoded({ extended: true }));
+//db.js
 
-
-const url =`mongodb+srv://hr7643157:hr7643157@cluster0.uft9m.mongodb.net/`;
+const url =`mongodb+srv://01hammadraza:k84M0ckvAP9VsNp5@cluster0.aykiz.mongodb.net/`;
 
 const connectionParams = {};
-mongoose.connect("mongodb+srv://hr7643157:hr7643157@cluster0.uft9m.mongodb.net/")
+mongoose.connect(url)
     .then(() => console.log('Connected to the database'))
     .catch((err) => console.error(`Error connecting to the database. \n${err}`));
 
