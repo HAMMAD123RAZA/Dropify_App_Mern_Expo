@@ -1,0 +1,189 @@
+[{
+  "_id": {
+    "$oid": "670c58f4c1f9e597e4247ade"
+  },
+  "name": "Tanker ",
+  "category": "Tanker",
+  "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLo2sTx-hDe0k_4HuhSk0m9hSwXb4I0rHQKw&s",
+  "price": 6000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6716166dddb580ea7190bf33"
+  },
+  "name": "Bottle packet ",
+  "image": "https://res.cloudinary.com/diblqbuco/image/upload/v1729500778/uploadsAdmin/qjopujkdfjs8ijfobbun.jpg",
+  "price": 570,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "671616a3ddb580ea7190bf36"
+  },
+  "name": "Mini packet ",
+  "image": "https://res.cloudinary.com/diblqbuco/image/upload/v1729500834/uploadsAdmin/okbida6ow6sgidewnw2g.jpg",
+  "price": 300,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "671616c6ddb580ea7190bf39"
+  },
+  "name": "Bottle ",
+  "image": "https://res.cloudinary.com/diblqbuco/image/upload/v1729500869/uploadsAdmin/lluwyyfjight2iay4cwp.jpg",
+  "price": 120,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67161715ddb580ea7190bf3d"
+  },
+  "name": "Small size",
+  "image": "https://res.cloudinary.com/diblqbuco/image/upload/v1729500949/uploadsAdmin/crrbx8ruulkmknvtskuk.jpg",
+  "price": 80,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67161730ddb580ea7190bf40"
+  },
+  "name": "Bottle",
+  "image": "https://res.cloudinary.com/diblqbuco/image/upload/v1729500975/uploadsAdmin/v9f9miifk5lqof92ecpc.jpg",
+  "price": 90,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6716187cddb580ea7190bf43"
+  },
+  "name": "Water Gallon",
+  "image": "https://res.cloudinary.com/diblqbuco/image/upload/v1729501308/uploadsAdmin/kfnothxmkyobj2qk2lsj.jpg",
+  "price": 1400,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "671618cfddb580ea7190bf46"
+  },
+  "name": "Mini gallon ",
+  "image": "https://res.cloudinary.com/diblqbuco/image/upload/v1729501390/uploadsAdmin/ye9kjhpx5viqpjxkofu0.jpg",
+  "price": 720,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "671618fbddb580ea7190bf49"
+  },
+  "name": "Aquafina",
+  "image": "https://res.cloudinary.com/diblqbuco/image/upload/v1729501434/uploadsAdmin/fesd5x9nhbpfkrk04as3.jpg",
+  "price": 95,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67161964ddb580ea7190bf4e"
+  },
+  "name": "Medium Tank",
+  "image": "https://res.cloudinary.com/diblqbuco/image/upload/v1729501539/uploadsAdmin/pzdnaqyl2beiqfkve30z.jpg",
+  "price": 4200,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6716198eddb580ea7190bf51"
+  },
+  "name": "Full Tank",
+  "image": "https://res.cloudinary.com/diblqbuco/image/upload/v1729501581/uploadsAdmin/nlcv5dnttlfp3bpmr7qz.jpg",
+  "price": 7200,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "671619afddb580ea7190bf54"
+  },
+  "name": "Mini Tank",
+  "image": "https://res.cloudinary.com/diblqbuco/image/upload/v1729501615/uploadsAdmin/lxtxf1vy9bkil7rzlos2.jpg",
+  "price": 4500,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67177b0fd9fbe230a0102e51"
+  },
+  "name": "Regular Bottle ",
+  "category": "Bottle",
+  "image": "https://res.cloudinary.com/diblqbuco/image/upload/v1729592079/uploadsAdmin/tcc1a2ok44k4djsxukad.jpg",
+  "price": 120,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67177b54d9fbe230a0102e54"
+  },
+  "name": "Regular Gallon ",
+  "category": "Gallon",
+  "image": "https://res.cloudinary.com/diblqbuco/image/upload/v1729592148/uploadsAdmin/dggkttwurtk5ovinpdxc.jpg",
+  "price": 1550,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67177b7ed9fbe230a0102e57"
+  },
+  "name": "6 packs",
+  "category": "Bottle",
+  "image": "https://res.cloudinary.com/diblqbuco/image/upload/v1729592190/uploadsAdmin/dnyldnincdsyvyvbftof.jpg",
+  "price": 520,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67177ba4d9fbe230a0102e5a"
+  },
+  "name": "Mini Bottles ",
+  "category": "Mini Bottle",
+  "image": "https://res.cloudinary.com/diblqbuco/image/upload/v1729592228/uploadsAdmin/z72cmstzztspufgcqxup.jpg",
+  "price": 320,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6717dddfd9fbe230a0102e77"
+  },
+  "name": "Regular Tank ",
+  "category": "Tanker",
+  "image": "https://res.cloudinary.com/diblqbuco/image/upload/v1729617374/uploadsAdmin/ft6mfovnjxshpruzgkx4.jpg",
+  "price": 5000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6717de0bd9fbe230a0102e7a"
+  },
+  "name": "Mini Tank ",
+  "category": "Tanker",
+  "image": "https://res.cloudinary.com/diblqbuco/image/upload/v1729617418/uploadsAdmin/cegjfppb8fltqqmhriwg.jpg",
+  "price": 3800,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6717de30d9fbe230a0102e7d"
+  },
+  "name": "Nestle Gallon ",
+  "category": "Gallon",
+  "image": "https://res.cloudinary.com/diblqbuco/image/upload/v1729617456/uploadsAdmin/bejmj4teyamdk0hd84zy.jpg",
+  "price": 1500,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6717de55d9fbe230a0102e80"
+  },
+  "name": "Mini packs",
+  "category": "Mini Bottle",
+  "image": "https://res.cloudinary.com/diblqbuco/image/upload/v1729617492/uploadsAdmin/ghnyfjssetiocazditld.jpg",
+  "price": 420,
+  "__v": 0
+}]
