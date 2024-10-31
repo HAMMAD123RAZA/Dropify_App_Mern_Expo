@@ -8,15 +8,11 @@ import Login from '../auth/Login'
 const index = () => {
   const [refreshing, setRefreshing] = useState(false);
 
-  // Function to handle the refresh event
   const onRefresh = useCallback(() => {
     setRefreshing(true);
-    
-    // Simulate fetching new data (or real logic for data fetching)
     setTimeout(() => {
-      // You can fetch new data here and update your state
       setRefreshing(false);
-    }, 2000); // Simulating a delay of 2 seconds
+    }, 2000); 
   }, []);
 
   return (

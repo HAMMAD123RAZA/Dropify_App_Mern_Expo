@@ -14,6 +14,7 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 
+
 app.use(cors());
 
 app.use(express.urlencoded({ extended: true }));
@@ -26,6 +27,15 @@ mongoose.connect('mongodb://localhost:27017',{
 }).catch(() => {
     console.log('error connecting db');
 });
+//db.js
+mongoose.connect('mongodb://localhost:27017',{
+    dbName:"Water",
+}).then(()=>{
+    console.log('db connected')
+}).catch((err)=>{
+    console.log('err in connection to db:',err)
+})
+// >>>>>>> 670a52c460a02a70bd8bafd3cb080d2a88886255
 
 app.post('/create',CreateProduct)
 app.get('/get',GetProducts)

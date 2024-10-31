@@ -25,7 +25,7 @@ const Explore = () => {
     const filterOptions = [
         {
             title: 'Price',
-            values: ['100-500', '500-3000', '3000-10000'],
+            values: [100-500, 500-3000, 3000-10000],
         },
         {
             title: 'Category',
@@ -33,7 +33,7 @@ const Explore = () => {
         },
         {
             title: 'Litre',
-            values: ['1-10', '10-50'],
+            values: [1-10, 10-50],
         },
     ];
 
