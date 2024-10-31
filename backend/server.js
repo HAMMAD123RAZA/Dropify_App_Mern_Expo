@@ -32,10 +32,7 @@ app.use(express.urlencoded({ extended: true }));
 
 const connectDb = async () => {
     try {
-        await mongoose.connect('mongodb+srv://myNewUsername:newUser@cluster0.aykiz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-        });
+        await mongoose.connect(process.env.dbUrl);
         console.log('DB connected');
     } catch (error) {
         console.log('Error in DB connection:', error);
